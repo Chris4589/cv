@@ -151,13 +151,34 @@
         </div>
     </div>
     <!-- FIN CONOCIMIENTOS -->
+    
+    <!-- CONTACTAME -->
     <div class="contactame">
-        <div class="form">
+        <div class="form" id="form">
+            <h1>Contactame</h1>
 
+            <form>
+                <label for="fname">Nombres</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Apellidos</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">País</label>
+                <select id="country" name="country">
+                    <option value="australia">Guatemala</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="usa">Otro</option>
+                </select>
+
+                <label for="subject">Enviar</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
-    <!-- CONTACTAME -->
-
     <!-- FIN CONTACTAME -->
 
     <!-- FOOTER -->
