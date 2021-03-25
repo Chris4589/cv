@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/sobre.css">
     <link rel="stylesheet" href="./css/certificados.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -74,11 +75,72 @@
         </div>
     </div>
     <div class="certificados">
+        <h1>Certificados</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    NodeJS
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-91785c10-6472-47d8-b332-57a5333d6a80/" class="img-cert">
+                        <img src="./assets/nodejs.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    Angular
+                    <a target="_blank" href="" class="img-cert">
+                        <img src="./assets/angular.png" alt="">
+                    </a>
+                </div>
 
+                <div class="swiper-slide">
+                    HTML5 + CSS3
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-5103fd1c-ff9a-4995-ac46-2f4c8ebda593/" class="img-cert">
+                        <img src="./assets/css.png" alt="">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    JavaScript
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-0323fbaf-3b32-4c58-9b62-a8e031aae67e/" class="img-cert">
+                        <img src="./assets/js.png" alt="">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    Docker
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-6ddc84e3-46f4-4932-b6a7-4cf2b5eba642/" class="img-cert">
+                        <img src="./assets/docker.png" alt="">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    Kubernetes
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-a4a22fcb-9959-4225-be69-a5c86a8ceb0b/" class="img-cert">
+                        <img src="./assets/k8s.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
 
-    
 
+    <br><br><br><br><br><br>
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        });
+    </script>
 
     <script>
         const btn = document.querySelector("#btn");
