@@ -27,10 +27,10 @@
                         <a href="#sobre-mi" id="sobre-mi-href">Quien soy</a>
                     </li>
                     <li>
-                        <a href="">Conocimientos</a>
+                        <a href="#cert" id="cert-ref">Certificaciones</a>
                     </li>
                     <li>
-                        <a href="">Certificaciones</a>
+                        <a href="">Conocimientos</a>
                     </li>
                     <li>
                         <a href="">Contactame</a>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="certificados">
+    <div class="certificados" id="cert">
         <h1>Certificados</h1>
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="swiper-slide">
                     Angular
-                    <a target="_blank" href="" class="img-cert">
+                    <a target="_blank" href="https://www.udemy.com/certificate/UC-9a207411-ada7-4637-b9bd-3d8a49b472e9/" class="img-cert">
                         <img src="./assets/angular.png" alt="">
                     </a>
                 </div>
@@ -187,9 +187,20 @@
         if(sobremi){
             sobremi.addEventListener('click',function (event){
                 event.preventDefault(); 
-                setTimeout(()=> location.href="#sobre-mi", 1000);
+                location.href="#sobre-mi";
             });
         }
+
+        const certref = document.querySelector("#cert-ref");
+
+        if(certref){
+            certref.addEventListener('click',function (event){
+                event.preventDefault(); 
+                location.href="#cert";
+            });
+        }
+
+        
         ////////////
     </script>
 </body>
