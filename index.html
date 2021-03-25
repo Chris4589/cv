@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sobre.css">
     <link rel="stylesheet" href="./css/certificados.css">
+    <link rel="stylesheet" href="./css/conocimientos.css">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="banner">
+    <div class="banner" id="inicio">
         <header>
             <div class="logo">
                 CH
@@ -21,7 +22,7 @@
             <nav id="nav" class="">
                 <ul>
                     <li>
-                        <a href="">Inicio</a>
+                        <a href="#inicio" id="inicio-ref">Inicio</a>
                     </li>
                     <li>
                         <a href="#sobre-mi" id="sobre-mi-href">Quien soy</a>
@@ -30,7 +31,7 @@
                         <a href="#cert" id="cert-ref">Certificaciones</a>
                     </li>
                     <li>
-                        <a href="">Conocimientos</a>
+                        <a href="#conocimientos" id="conocimientosref">Conocimientos</a>
                     </li>
                     <li>
                         <a href="">Contactame</a>
@@ -60,7 +61,7 @@
         <div class="mi-info">
             <div class="titles">
                 <h1>Christopher Herrera</h1>
-                <h5>Desarrolladow Web Jr</h5>
+                <h5>Desarrollador Web Jr</h5>
             </div>
             <div class="parrafo">
                 <p>
@@ -125,9 +126,29 @@
         </div>
     </div>
 
+    <div class="conocimientos" id="conocimientos">
+        <div class="img-cono">
+            <img src="./assets/conocimientos.png" class="img">
+        </div>
+        <div class="list">
+            <h2>Conocimientos</h2>
+            <ul class="ul-list">
+                <li id="opc1" class="active">Frontend</li>
+                <li id="opc2">Backend</li>
+                <li id="opc3">Despliegues</li>
+            </ul>
+            <ul id="conocimientos-list"></ul>
+
+        </div>
+    </div>
 
     <br><br><br><br><br><br>
-    
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <footer>
+
+    </footer>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -142,66 +163,8 @@
         });
     </script>
 
-    <script>
-        const btn = document.querySelector("#btn");
-        const nav = document.querySelector("#nav");
-        if(btn)
-        {
-            btn.addEventListener('click', (event) => {
-                nav.classList.toggle("active");
-            }); 
-        }
-        ////////////////
-        const chris = document.querySelector("#chris");
-        const desarrollador = document.querySelector("#desarrollador");
-
-        const EfectText = () => {
-            var name = "", arrayName =  'Christopher Herrera' ;
-            var counter = 0;
-            if(!chris)
-                return;
-
-            const iInterval = setInterval( ( )=>{
-                name += arrayName[counter];  
-                chris.textContent = name;
-                ++counter;
-
-                if(counter >= 19){
-                    counter = 0;
-                    desarrollador.textContent = 'Desarrollador Web Jr';
-                    
-                    clearInterval(iInterval);
-
-                    setTimeout(()=>{
-                        desarrollador.textContent = '';
-                        EfectText( );
-                    }, 2000);
-                }
-            }, 200);
-        }
-        EfectText( );
-        //////////////
-
-        const sobremi = document.querySelector("#sobre-mi-href");
-
-        if(sobremi){
-            sobremi.addEventListener('click',function (event){
-                event.preventDefault(); 
-                location.href="#sobre-mi";
-            });
-        }
-
-        const certref = document.querySelector("#cert-ref");
-
-        if(certref){
-            certref.addEventListener('click',function (event){
-                event.preventDefault(); 
-                location.href="#cert";
-            });
-        }
-
+    <script src="./js/main.js">
         
-        ////////////
     </script>
 </body>
 </html>
