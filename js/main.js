@@ -129,3 +129,12 @@ const opc1 = document.querySelector("#opc1");
                 location.href="#conocimientos";
             });
         }
+
+        const formref = document.querySelector("#formref");
+
+        if(formref){
+            formref.addEventListener('click',function (event){
+                event.preventDefault(); 
+                location.href="#form";
+            });
+        }
