@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Herrera</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="stylesheet" href="./css/certificados.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <div class="logo">
+                CH
+            </div>
+            <nav id="nav" class="">
+                <ul>
+                    <li>
+                        <a href="">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#sobre-mi" id="sobre-mi-href">Quien soy</a>
+                    </li>
+                    <li>
+                        <a href="">Conocimientos</a>
+                    </li>
+                    <li>
+                        <a href="">Certificaciones</a>
+                    </li>
+                    <li>
+                        <a href="">Contactame</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </header>
+
+        <div class="banner-group">
+            
+            <div class="banner-info">
+                <p class="h1" id="chris">C</p>
+                <p class="h3" id="desarrollador"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre-mi" id="sobre-mi">
+        <section>
+            <div class="mi-photo">
+                <img src="./assets/yo.jpg" class="yo">
+            </div>
+        </section>
+        <div class="mi-info">
+            <div class="titles">
+                <h1>Christopher Herrera</h1>
+                <h5>Desarrolladow Web Jr</h5>
+            </div>
+            <div class="parrafo">
+                <p>
+                    Mi nombre es Christopher David Herrera Pérez, tengo 22 años, soy de Ciudad de Guatemala
+                    soy un hombre muy capaz ademas de eso soy aprendiz en el desarrollo web, mi fuerte es el backend con NodeJS sin embargo tengo
+                    conocimientos en frontend como en despliegues con docker o k8s, siempre me gusta aprender 
+                    cosas nuevas mientrás exista la posibilidad.!
+                </p> 
+                <a href="./assets/ChristopherHerrera_CV.pdf" target="_blank" >Descargar CV</a>
+                
+            </div>
+        </div>
+    </div>
+    <div class="certificados">
+
+    </div>
+
+    
+
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const nav = document.querySelector("#nav");
+        if(btn)
+        {
+            btn.addEventListener('click', (event) => {
+                nav.classList.toggle("active");
+            }); 
+        }
+        ////////////////
+        const chris = document.querySelector("#chris");
+        const desarrollador = document.querySelector("#desarrollador");
+
+        const EfectText = () => {
+            var name = "", arrayName =  'Christopher Herrera' ;
+            var counter = 0;
+            if(!chris)
+                return;
+
+            const iInterval = setInterval( ( )=>{
+                name += arrayName[counter];  
+                chris.textContent = name;
+                ++counter;
+
+                if(counter >= 19){
+                    counter = 0;
+                    desarrollador.textContent = 'Desarrollador Web Jr';
+                    
+                    clearInterval(iInterval);
+
+                    setTimeout(()=>{
+                        desarrollador.textContent = '';
+                        EfectText( );
+                    }, 2000);
+                }
+            }, 200);
+        }
+        EfectText( );
+        //////////////
+
+        const sobremi = document.querySelector("#sobre-mi-href");
+
+        if(sobremi){
+            sobremi.addEventListener('click',function (event){
+                event.preventDefault(); 
+                setTimeout(()=> location.href="#sobre-mi", 1000);
+            });
+        }
+        ////////////
+    </script>
+</body>
+</html>
