@@ -141,11 +141,12 @@ const opc1 = document.querySelector("#opc1");
 
 
         const enviar = document.querySelector("#enviar");
+        const form2 = document.querySelector("#form2");
         if(enviar) {
             enviar.addEventListener('click', (event)=>{
                 fetch("https://formsubmit.co/ajax/089f468d8a6b5be5e25c2119f7695d23",{
                 method: 'POST',
-                body: new FormData(form)
+                body: new FormData(form2)
             })
             .then( resp => resp.json() )
             .then( result => {
