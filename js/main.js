@@ -140,7 +140,7 @@ const opc1 = document.querySelector("#opc1");
         }
 
 
-        const enviar = querySelector("#enviar");
+        const enviar = document.querySelector("#enviar");
         if(enviar) {
             enviar.addEventListener('click', (event)=>{
                 fetch("https://formsubmit.co/ajax/089f468d8a6b5be5e25c2119f7695d23",{
