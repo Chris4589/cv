@@ -157,12 +157,12 @@
         <div class="form" id="form">
             <h1>Contactame</h1>
 
-            <form>
+            <form target="_blank" action="https://formsubmit.co/089f468d8a6b5be5e25c2119f7695d23 " method="POST">
                 <label for="fname">Nombres</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="name" name="name" placeholder="Your name..">
 
-                <label for="lname">Apellidos</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="lname">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email..">
 
                 <label for="country">País</label>
                 <select id="country" name="country">
@@ -173,9 +173,9 @@
                 </select>
 
                 <label for="subject">Enviar</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="enviar">
             </form>
         </div>
     </div>
