@@ -153,9 +153,9 @@ const opc1 = document.querySelector("#opc1");
             .then( result => {
 
                     if( enviado ){
-                        enviado.classList.add(activezx);
+                        enviado.classList.add("activezx");
 
-                        setTimeout(()=> enviado.classList.remove(activezx), 3000);
+                        setTimeout(()=> enviado.classList.remove("activezx"), 3000);
                     }
                     
                 })
