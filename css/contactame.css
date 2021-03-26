@@ -18,6 +18,18 @@
     color: #ffffff;
     padding: 30px 40px;
 }
+.form a {
+  background-color: #4270d4;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+}
+.activezx {
+  display: block;
+}
 
 .form h1 {
     text-align: center;
