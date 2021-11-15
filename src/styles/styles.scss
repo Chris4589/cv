@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+
+@import './loader/loader.scss';
+@import './index/index.scss';
+@import './index/header.scss';
+@import './index/aboutme.scss';
+@import './index/Course.scss';
+@import './index/contactme.scss';
+@import './index/footer.scss';

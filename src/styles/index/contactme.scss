@@ -1,0 +1,160 @@
+.ContactMe__container {
+  background: url('../../assets/contact.jpeg');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+
+  height: 600px;
+  width: 100%;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ContactMe__div {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    background: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 12px 14px 3px -5px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 12px 14px 3px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 12px 14px 3px -5px rgba(0,0,0,0.55);
+    padding: 30px 15px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ContactMe_preform {
+      display: flex;
+      height: 100%;
+
+      .ContactMe__form {
+        width: 50%;
+        height: 100%;
+        padding: 0 10px;
+
+        h3 {
+          text-align: center;
+          font-size: 1.5em;
+          margin-bottom: 20px;
+        }
+
+        .ContactMe__button_send {
+          background: none;
+          outline: none;
+          height: auto;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          &:hover, &::selection {
+            outline: none;
+          }
+
+          button {
+            height: 35px;
+            width: 120px;
+            background: #3F3351;
+            border: none;
+            color: #ffff;
+            border-radius: 8px;
+          }
+        }
+
+        span {
+          display: flex;
+          background: #ffff;
+          margin: 10px;
+          border-bottom: gray;
+          outline: 1px #513b72b4 solid;
+          &:hover, &::selection {
+            outline: 2px #513b72 solid;
+          }
+
+          textarea {
+            height: 80px;
+            max-height: 80px;
+            width: 100%;
+            min-width: 100%;
+            border: gray;
+            resize: none;
+            outline: none;
+            padding: 5px;
+          }
+
+          i {
+            height: 30px;
+            width: 30px;
+            line-height: 2;
+            text-align: center;
+            color: #1F1D36;
+          }
+
+          input {
+            height: 30px;
+            width: 100%;
+            border: 0;
+            outline: none;
+            box-sizing: border-box;  
+          }
+        }
+      }
+
+      .ContactMe__datos {
+        border-left: 1px solid rgb(179, 179, 179);
+        width: 50%;
+        height: 100%;
+        padding: 0 15px;
+
+        .ContactMe__item {
+          h3 {
+            font-weight:bold;
+          }
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+.ContactMe__container::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+@media screen and (max-width:900px) {
+  .ContactMe__container {
+    height: 800px;
+    .ContactMe__div {
+      width: 100%;
+
+      .ContactMe_preform {
+        flex-direction: column;
+
+        .ContactMe__form, .ContactMe__datos {
+          width: 100%;
+          border: 0;
+        }
+
+        .ContactMe__datos {
+          border-top: 1px solid rgb(179, 179, 179);
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+}
