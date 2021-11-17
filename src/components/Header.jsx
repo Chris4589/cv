@@ -5,7 +5,7 @@ import video from '../assets/pexels-cottonbro-5473796.mp4';
 export const Header = () => {
   return (
     <div className="Header">
-      <video autoPlay controls muted loop id="myVideo">
+      <video autoPlay playsInline controls muted loop id="myVideo">
         <source src={video} type="video/mp4"/>
       </video>
       <div className="Header__profile">

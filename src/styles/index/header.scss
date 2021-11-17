@@ -36,7 +36,10 @@
       height: 200px;
       width: 200px;
       object-fit: cover;
-      border-radius: 100%;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
       margin-bottom: 12px;
       animation-name: example;
       animation-duration: 2s;
@@ -81,10 +84,18 @@
   }
 
   @keyframes example {
-    0%   {outline:10px solid #1F1D36;}
-    25%  {outline:35px solid transparent;}
-    50%  {outline:45px solid transparent;}
-    100% {outline:60px solid transparent;}
+    0%   {
+      outline:10px solid #1F1D36;
+    }
+    25%  {
+      outline:35px solid transparent;
+    }
+    50%  {
+      outline:45px solid transparent;
+    }
+    100% {
+      outline:60px solid transparent;
+    }
   }
 }
 
