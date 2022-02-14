@@ -32,7 +32,7 @@ export const ContactMe = () => {
               <h3>
                 Celular:
               </h3>
-              45899016
+              REMOVED
             </div>
             <div className="ContactMe__item">
               <h3>
